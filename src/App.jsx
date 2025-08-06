@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Ragistration from './Components/Ragistrationpage/Ragistration'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
      <h1>sohel momin is so brave guy.</h1>
+     < Ragistration/>
     </>
   )
 }
