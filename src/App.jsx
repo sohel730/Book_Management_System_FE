@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import Ragistration from './Components/Ragistrationpage/Ragistration'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MyRoutes from './Components/Routes/Myroutes';
 
 function App() {
- 
-
   return (
-    <>
-     <h1>sohel momin is so brave guy.</h1>
-     < Ragistration/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        {MyRoutes.map((route, index) => (
+          <Route 
+            key={index} 
+            path={route.path} 
+            element={route.element} // Ensure this is lowercase
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
