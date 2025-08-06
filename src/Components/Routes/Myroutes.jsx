@@ -1,5 +1,6 @@
 import Ragistration from "../Ragistrationpage/Ragistration";
 import Loginform from "../Loginpage/Loginform";
+import ForgetPassword from "../ForgetPassWordpage/ForgetPassword";
 
 const MyRoutes = [
   {
@@ -13,6 +14,11 @@ const MyRoutes = [
   {
     path: "/",
     element: <Ragistration />,
+  },
+  {
+    path:"/ForgetPassWord",
+    element:<ForgetPassword />,
+
   },
   {
     path: "*",

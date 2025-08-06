@@ -82,7 +82,7 @@ const Ragistration = () => {
 
             </form>
 
-            <button onClick={Gotologin}>Log in </button>
+           <p>if you registar  <button onClick={Gotologin}> Click here for Log in </button></p>
 
         </div>
 
