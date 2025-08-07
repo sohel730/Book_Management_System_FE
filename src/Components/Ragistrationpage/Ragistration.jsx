@@ -42,17 +42,17 @@ const Ragistration = () => {
     return (
 
         <div>
-            <h1>Ragistration Form</h1>
+            <h1 className='Ragistraiton_form_heading'>Ragistration Form</h1>
 
-            <form action="submit">
-                <div>
+            <form action="submit" className='form'>
+                <div className='child'>
                     <h4>Name</h4>
                     <input type="text" name="Username"
                         value={Username}
                         placeholder='Enter the user name'
                         onChange={(event) => setUsername(event.target.value)} />
                 </div>
-                <div>
+                <div  className='child'>
                     <h4>Mobile Number</h4>
                     <input type="number" name="number"
                         value={Number}
@@ -61,14 +61,14 @@ const Ragistration = () => {
                 </div>
 
                 <div>
-                    <h4>Email</h4>
+                    <h4  className='child'>Email</h4>
                     <input type="email" name="Email"
                         value={Email}
                         placeholder='Enter the Email'
                         onChange={(event) => setEmail(event.target.value)} />
                 </div>
 
-                <div>
+                <div  className='child'>
                     <h4>Password</h4>
                     <input type="password" name="Password"
                         value={Password}
@@ -77,12 +77,14 @@ const Ragistration = () => {
                 </div>
 
                 <div>
-                    <button onClick={Handlesubmit}> Submit</button>
+                    <button onClick={Handlesubmit} className='submit'> Submit</button>
                 </div>
+
+                 
 
             </form>
 
-           <p>if you registar  <button onClick={Gotologin}> Click here for Log in </button></p>
+          <p>if you registar  <button onClick={Gotologin} className='gotologin'> Click here for Log in </button></p>
 
         </div>
 
