@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import './UpdateBookrecord.css'
 
 function UpdateBookrecord() {
@@ -12,6 +13,10 @@ function UpdateBookrecord() {
 
         setPublisheddate(event.target.files[0]);
 
+    }
+
+    const HandleBookpdf=(event)=>{
+        setPublisheddate(event.target.files[0]);
     }
 
     const HandleBookcreate = (event) => {
@@ -32,9 +37,11 @@ function UpdateBookrecord() {
     return (
         <div>
 
+            <h1 className='update_book_record_heading'>Update Book Record</h1>
+
             <form action="">
 
-                <div>
+                <div className='update_book_record_child'>
                     <label htmlFor="">Book Name</label>
                     <input type="text"
                         name='Bookname'
@@ -43,16 +50,16 @@ function UpdateBookrecord() {
                         onChange={(event) => setBookname(event.target.value)} />
                 </div>
 
-                <div>
+                <div className='update_book_record_child'>
                     <label htmlFor="">Author Name</label>
                     <input type="text"
                         name='Authorname'
-                        value={Authornamename}
+                        value={Authorname}
                         placeholder='Enter Author name'
                         onChange={(event) => setAuthorname(event.target.value)} />
                 </div>
 
-                <div>
+                <div className='update_book_record_child'>
                     <label htmlFor="">Book Price</label>
                     <input type="number"
                         name='Bookprice'
@@ -60,7 +67,7 @@ function UpdateBookrecord() {
                         placeholder='Enter Book price'
                         onChange={(event) => setBookprice(event.target.value)} />
                 </div>
-                <div>
+                <div className='update_book_record_child'>
                     <label htmlFor="">Published Date</label>
                     <input type="date"
                         name='Bookprice'
@@ -68,14 +75,14 @@ function UpdateBookrecord() {
                         onChange={(event) => setPublisheddate(event.target.value)} />
                 </div>
 
-                <div>
+                <div className='update_book_record_child'>
                     <input type="file"
                         accept='.pdf'
                         value={Bookpdf}
                         onChange={HandleBookpdf} />
                 </div>
 
-                <button onClick={HandleBookUpdate}>Update</button>
+                <button onClick={HandleBookUpdate} className='update_book_record_btn'>Update</button>
 
             </form>
 

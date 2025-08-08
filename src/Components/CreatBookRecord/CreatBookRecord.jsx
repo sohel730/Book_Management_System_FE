@@ -32,10 +32,10 @@ export default function CreatBookRecord() {
 
     return (
         <div>
-
+         <h1 className='create_book_record_heading'>Create Book Record</h1>
             <form action="">
 
-                <div>
+                <div className='create_book_record_child'>
                     <label htmlFor="">Book Name</label>
                     <input type="text"
                         name='Bookname'
@@ -48,12 +48,12 @@ export default function CreatBookRecord() {
                     <label htmlFor="">Author Name</label>
                     <input type="text"
                         name='Authorname'
-                        value={Authornamename}
+                        value={Authorname}
                         placeholder='Enter Author name'
                         onChange={(event) => setAuthorname(event.target.value)} />
                 </div>
 
-                <div>
+                <div className='create_book_record_child'>
                     <label htmlFor="">Book Price</label>
                     <input type="number"
                         name='Bookprice'
@@ -61,7 +61,7 @@ export default function CreatBookRecord() {
                         placeholder='Enter Book price'
                         onChange={(event) => setBookprice(event.target.value)} />
                 </div>
-                <div>
+                <div className='create_book_record_child'>
                     <label htmlFor="">Published Date</label>
                     <input type="date"
                         name='Bookprice'
@@ -69,14 +69,14 @@ export default function CreatBookRecord() {
                         onChange={(event) => setPublisheddate(event.target.value)} />
                 </div>
 
-                <div>
+                <div className='create_book_record_child'>
                     <input type="file"
                         accept='.pdf'
                         value={Bookpdf}
                         onChange={HandleBookpdf} />
                 </div>
 
-                <button onClick={HandleBookcreate}>Create</button>
+                <button onClick={HandleBookcreate} className='create_book_record_btn'>Create</button>
 
             </form>
 

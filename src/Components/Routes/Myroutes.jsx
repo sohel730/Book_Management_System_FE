@@ -44,7 +44,7 @@ const MyRoutes = [
   },
   {
     path:"/Dashboard/SearchBookrecord",
-    element:<SearchBookrecords/>
+    element:<SearchBookrecord/>
 
   }
   ,
