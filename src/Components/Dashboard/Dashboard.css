@@ -1,65 +1,144 @@
+/* First Child Styles */
 .Dashbord_first_child {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: blue;
+    align-items: center; /* Center items vertically */
+    background-color: #28a745; /* Green */
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
 }
 
+/* Dashboard Heading */
 .Dashboard_heading {
-
-
-    border: 1px solid blue;
     color: white;
-
-    padding: 20px;
-    font-size: 25px;
+    font-size: 2.5rem; /* Responsive font size */
     font-weight: 700;
+    margin: 0; /* Remove default margin */
 }
 
+/* Back Button */
 .Dashboard_back_btn {
-
     margin: 6px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-
+    padding: 10px 20px; /* Adjust padding for better touch targets */
     border-radius: 8px;
     border: 2px solid white;
     color: white;
-    background-color: blue;
-    font-size: 18px;
+    background-color: #007BFF; /* Updated to a brighter blue */
+    font-size: 1rem; /* Responsive font size */
     font-weight: 500;
-
+    transition: background-color 0.3s; /* Smooth transition */
 }
-.Dashboard_secound_child{
-    
-    margin: 10px;
+
+.Dashboard_back_btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Second Child Styles */
+.Dashboard_secound_child {
+    margin: 20px; /* Increased margin for better spacing */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 130px;
-    grid-gap: 50px;
-    /* border: 1px solid black; */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
 }
-.elem_one{
-    border:1px solid blue;
-    background-color: blue;
-    color: white;
-    width: 100%;
-    border-radius: 10px;
-}
-.logo{
-    color: white;
 
-}
-.logo_details{
+/* Element Styles */
+.elem_one {
+    border: 1px solid #28a745; /* Green border */
+    background-color: #34d058; /* Lighter green */
     color: white;
-    font-size: 18px;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for content */
+    text-align: center; /* Center text */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+.elem_one:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Profile Element Styles */
+.profile_element {
+    border: 1px solid #28a745; /* Green border */
+    background-color: #34d058; /* Lighter green */
+    color: white;
+    border-radius: 10px;
+    padding: 20px; /* Add padding for content */
+    text-align: center; /* Center text */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 3rem; /* Larger logo size */
+    margin-bottom: 10px; /* Space below logo */
+    color: white; /* Ensure logo color is white */
+}
+
+/* Logo Details */
+.logo_details {
+    font-size: 1.2rem; /* Responsive font size */
     font-weight: 600;
 }
-.create_book_btn{
+
+/* Create Book Button */
+.create_book_btn {
     color: white;
-    font-size: 18px;
+    font-size: 1rem; /* Responsive font size */
     font-weight: 600;
     text-decoration: none;
+    background-color: #28a745; /* Green */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.create_book_btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Dashboard_heading {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    .Dashboard_back_btn {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .elem_one, .profile_element {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .logo {
+        font-size: 2.5rem; /* Smaller logo size for mobile */
+    }
+
+    .logo_details {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .Dashboard_heading {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .Dashboard_back_btn {
+        width: 100%; /* Full width button on small screens */
+    }
+
+    .elem_one, .profile_element {
+        padding: 10px; /* Further adjust padding for mobile */
+    }
+
+    .logo {
+        font-size: 2rem; /* Smaller logo size for very small screens */
+    }
+
+    .logo_details {
+        font-size: 0.9rem; /* Smaller font size for very small screens */
+    }
 }

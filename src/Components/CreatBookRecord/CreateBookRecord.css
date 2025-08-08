@@ -1,10 +1,23 @@
+/* Heading Styles */
 .create_book_record_heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem; /* Increased font size for better visibility */
     margin-bottom: 20px;
-    color: #333;
+    color: #28a745; /* Green color */
 }
 
+/* Form Container */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 8px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Child Elements */
 .create_book_record_child {
     margin-bottom: 15px;
 }
@@ -13,43 +26,76 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #333; /* Dark text for labels */
 }
 
+/* Input Styles */
 .create_book_record_child input[type="text"],
 .create_book_record_child input[type="number"],
 .create_book_record_child input[type="date"],
 .create_book_record_child input[type="file"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px; /* Increased padding for better touch targets */
+    border: 1px solid #28a745; /* Green border */
     border-radius: 4px;
     font-size: 1rem;
+    transition: border-color 0.3s; /* Smooth transition for focus */
 }
 
+.create_book_record_child input[type="text"]:focus,
+.create_book_record_child input[type="number"]:focus,
+.create_book_record_child input[type="date"]:focus,
+.create_book_record_child input[type="file"]:focus {
+    border-color: #4caf50; /* Darker green on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* File Input Styles */
 .create_book_record_child input[type="file"] {
     padding: 5px;
 }
 
+/* Button Styles */
 .create_book_record_btn {
-    background-color: #4c6baf; /* Green */
+    background-color: #28a745; /* Green */
     color: white;
-    padding: 10px 15px;
+    padding: 12px 15px; /* Increased padding for better touch targets */
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
     width: 100%;
+    transition: background-color 0.3s; /* Smooth transition */
 }
 
 .create_book_record_btn:hover {
-    background-color: #4945a0; /* Darker green */
+    background-color: #218838; /* Darker green on hover */
 }
 
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .create_book_record_heading {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .create_book_record_btn {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .create_book_record_child input[type="text"],
+    .create_book_record_child input[type="number"],
+    .create_book_record_child input[type="date"],
+    .create_book_record_child input[type="file"] {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .create_book_record_heading {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .create_book_record_btn {
+        padding: 10px; /* Further adjust padding for mobile */
+    }
 }

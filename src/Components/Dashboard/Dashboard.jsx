@@ -1,6 +1,11 @@
 import React from 'react'
 import './Dashboard.css'
 import { useNavigate } from 'react-router-dom'
+import { IoAddCircleOutline } from "react-icons/io5";
+import { MdOutlineBrowserUpdated } from "react-icons/md";
+import { FaSearchPlus } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+
 
 export default function Dashboard() {
 
@@ -8,6 +13,7 @@ export default function Dashboard() {
     const CreateBookNavigation=useNavigate();
     const UpdateBookNavigate=useNavigate();
     const SearchBookNavigate=useNavigate();
+    const ProfileNavigate=useNavigate();
 
     const GototBack = () => {
 
@@ -32,6 +38,11 @@ export default function Dashboard() {
 
     }
 
+    const GottoProfile=()=>{
+
+  ProfileNavigate("/Dashboard/Profile")
+    }
+
     return (
         <div className='parent_Dashboard'>
 
@@ -45,26 +56,26 @@ export default function Dashboard() {
 
                 <div className='elem_one'>
                     <div>
-                        <p className='logo'>logo1</p>
+                        <p className='logo'><IoAddCircleOutline /></p>
                         <p className='logo_details'><button onClick={GottoCreateBook} className='create_book_btn'>Creat Book Record</button></p>
                     </div>
                 </div>
                 <div className='elem_one'>
                     <div>
-                        <p className='logo'>logo2</p>
+                        <p className='logo'><MdOutlineBrowserUpdated /></p>
                         <p className='logo_details'><button onClick={GottoUpdateBook} className='create_book_btn'>Update Book Record</button></p>
                     </div>
                 </div>
                 <div className='elem_one'>
                     <div>
-                        <p className='logo'>logo3</p>
+                        <p className='logo'><FaSearchPlus /></p>
                         <p className='logo_details'><button onClick={GottoSearchBookrecord} className='create_book_btn'>Search Book Record</button></p>
                     </div>
                 </div>
                 <div className='elem_one'>
                     <div>
-                        <p className='logo'>logo4</p>
-                        <p className='logo_details'>Profile</p>
+                        <p className='logo'><CgProfile /></p>
+                        <p className='logo_details'><button onClick={GottoProfile} className='create_book_btn'>Profile</button></p>
                     </div>
                 </div>
             </div>

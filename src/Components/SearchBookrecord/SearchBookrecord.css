@@ -1,0 +1,89 @@
+/* css for the serach input and button*/
+
+/* Parent Container Styles */
+.Search_page_parent_first_child {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 20px; /* Add margin for spacing */
+}
+
+/* Search Input Styles */
+.Search_input {
+    width: 100%; /* Full width of the parent */
+    max-width: 400px; /* Set a maximum width */
+    padding: 12px; /* Padding for better touch targets */
+    border: 1px solid #28a745; /* Green border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+/* Focus Effect for Input */
+.Search_input:focus {
+    border-color: #4caf50; /* Darker green on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Search Button Styles */
+.search_btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    margin-left: 10px; /* Space between input and button */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover Effect for Button */
+.search_btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Search_input {
+        max-width: 80%; /* Adjust max width for smaller screens */
+    }
+
+    .search_btn {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .Search_input {
+        max-width: 100%; /* Full width for very small screens */
+    }
+
+    .search_btn {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+}
+
+/* Table css*/
+.Search_page_parent_secound_child{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Table{
+
+    border: 1px solid black;
+    margin: 15px;
+}
+.Table_header{
+    border: 1px solid red;
+    margin: 5px;
+}
+.Table_header_tr{
+    border: 1px solid green;
+}
+.Table_body{
+    border: 1px solid blue;
+}

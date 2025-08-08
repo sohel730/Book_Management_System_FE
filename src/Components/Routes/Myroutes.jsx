@@ -5,6 +5,8 @@ import Dashboard from "../Dashboard/Dashboard";
 import CreatBookRecord from "../CreatBookRecord/CreatBookRecord";
 import UpdateBookrecord from "../UpdateBookrecord/UpdateBookrecord";
 import SearchBookrecord from "../SearchBookrecord/SearchBookrecord";
+import { Profiler } from "react";
+import Profile from "../Profilepage/Profile";
 
 const MyRoutes = [
   {
@@ -46,8 +48,13 @@ const MyRoutes = [
     path:"/Dashboard/SearchBookrecord",
     element:<SearchBookrecord/>
 
-  }
-  ,
+  },
+  {
+
+      path:"/Dashboard/Profile",
+      element:<Profile/>
+
+  },
   {
     path: "*",
     element: <div>404 Not Found</div>,
