@@ -11,6 +11,7 @@ const Ragistration = () => {
 
 
     const NavigatetoLogin=useNavigate();
+    const NavigatetoDashboard=useNavigate();
     
 
 
@@ -38,6 +39,11 @@ const Ragistration = () => {
         
     }
     
+    const GotoDahsboard=()=>{
+
+         NavigatetoDashboard("/Dashboard")
+
+    }
 
     return (
 
@@ -85,7 +91,7 @@ const Ragistration = () => {
             </form>
 
           <p>if you registar  <button onClick={Gotologin} className='gotologin'> Click here for Log in </button></p>
-
+          <button onClick={GotoDahsboard}>Dashboard</button>
         </div>
 
 

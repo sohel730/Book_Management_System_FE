@@ -1,0 +1,65 @@
+.Dashbord_first_child {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+}
+
+.Dashboard_heading {
+
+
+    border: 1px solid blue;
+    color: white;
+
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.Dashboard_back_btn {
+
+    margin: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    background-color: blue;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.Dashboard_secound_child{
+    
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 130px;
+    grid-gap: 50px;
+    /* border: 1px solid black; */
+}
+.elem_one{
+    border:1px solid blue;
+    background-color: blue;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+.logo{
+    color: white;
+
+}
+.logo_details{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.create_book_btn{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}

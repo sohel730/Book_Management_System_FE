@@ -1,6 +1,10 @@
 import Ragistration from "../Ragistrationpage/Ragistration";
 import Loginform from "../Loginpage/Loginform";
 import ForgetPassword from "../ForgetPassWordpage/ForgetPassword";
+import Dashboard from "../Dashboard/Dashboard";
+import CreatBookRecord from "../CreatBookRecord/CreatBookRecord";
+import UpdateBookrecord from "../UpdateBookrecord/UpdateBookrecord";
+import SearchBookrecord from "../SearchBookrecord/SearchBookrecord";
 
 const MyRoutes = [
   {
@@ -16,10 +20,34 @@ const MyRoutes = [
     element: <Ragistration />,
   },
   {
-    path:"/ForgetPassWord",
-    element:<ForgetPassword />,
+    path: "/ForgetPassWord",
+    element: <ForgetPassword />,
 
   },
+  {
+    path: "/Dashboard",
+    element: <Dashboard />
+ 
+  },
+  {
+
+    path: "/Dashboard/CreatBookRecord",
+    element: <CreatBookRecord />
+
+  }
+  ,
+  {
+    path: "/Dashboard/UpdateBookrecord",
+    element: <UpdateBookrecord />
+
+
+  },
+  {
+    path:"/Dashboard/SearchBookrecord",
+    element:<SearchBookrecords/>
+
+  }
+  ,
   {
     path: "*",
     element: <div>404 Not Found</div>,
