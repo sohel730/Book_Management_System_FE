@@ -1,0 +1,29 @@
+
+
+.profile_parent{
+
+    width: 100%;
+    height: max-content;
+    border: 1px solid black;
+}
+.profile_heading{
+
+    color:green;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.profile_image{
+
+    width: 100%;
+    height: max-content;
+    border: 1px solid red;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.Profile_para{
+    /* display: flex;
+    justify-content: flex-start;
+    align-items:flex-start; */
+    text-align: left;
+}

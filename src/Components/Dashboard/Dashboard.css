@@ -7,6 +7,7 @@
     background-color: #28a745; /* Green */
     padding: 10px 20px; /* Add padding for better spacing */
     border-radius: 8px; /* Rounded corners */
+    margin-bottom: 60px;
 }
 
 /* Dashboard Heading */
@@ -22,24 +23,30 @@
     margin: 6px;
     padding: 10px 20px; /* Adjust padding for better touch targets */
     border-radius: 8px;
-    border: 2px solid white;
-    color: white;
-    background-color: #007BFF; /* Updated to a brighter blue */
+    border: 2px solid rgb(156, 155, 155);
+    color: rgb(68, 67, 67);
+    background-color: #f7f8fa; /* Updated to a brighter blue */
     font-size: 1rem; /* Responsive font size */
     font-weight: 500;
     transition: background-color 0.3s; /* Smooth transition */
 }
 
 .Dashboard_back_btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    
+    color:white;
+    background-color: black;
+
 }
+
+
 
 /* Second Child Styles */
 .Dashboard_secound_child {
+    
     margin: 20px; /* Increased margin for better spacing */
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between grid items */
+    gap: 30px; /* Space between grid items */
 }
 
 /* Element Styles */

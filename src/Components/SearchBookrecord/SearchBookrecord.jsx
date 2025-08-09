@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './SearchBookrecord.css'
+import { TbLeaf } from 'react-icons/tb'
 
 function SearchBookrecord() {
     const [Searchdata, setSearchdata] = useState("")
+    const [data, setdata] = useState([
 
-    let Tabledata = [
         {
             id: 1,
             bookname: "Book1",
@@ -15,6 +16,7 @@ function SearchBookrecord() {
 
 
         },
+
         {
             id: 2,
             bookname: "Book2",
@@ -107,30 +109,50 @@ function SearchBookrecord() {
 
 
         }
-    ]
+    ])
+
+
 
     const Handlesearch = () => {
+        let Searchfnx
 
-        console.log(Searchdata);
+        if (Searchdata !== null) {
+
+            Searchfnx = data.filter((val) => {
+
+              return val.bookname.toUpperCase().includes(Searchdata.toLocaleUpperCase())
+                
+
+            })
+
+            console.log(Searchdata)
+            console.log(Searchfnx)
+            setdata(Searchfnx)
+        }
+     
+
+
     }
 
     const Handledelet = (id) => {
 
 
-        Tabledata = Tabledata.filter((val) => {
+        let NewTabledata = data.filter((val) => {
 
-            if ((val.id) != id) {
+            if (val.id !== id) {
                 return val;
 
             }
         })
 
+        setdata(NewTabledata)
 
         console.log(id);
 
 
+
     }
-    
+
     return (
         <div className='Search_page_parent'>
 
@@ -166,7 +188,8 @@ function SearchBookrecord() {
 
                     <tbody className='Table_body'>
                         {
-                            Tabledata.map((data) => (
+                            data.map((data) => (
+
 
                                 <tr key={data.id} className='Table_body_tr'>
                                     <td>{data.bookname}</td>
