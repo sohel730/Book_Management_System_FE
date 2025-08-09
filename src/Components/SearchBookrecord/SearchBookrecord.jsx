@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SearchBookrecord.css'
 
 function SearchBookrecord() {
     const [Searchdata, setSearchdata] = useState("")
 
-    const Tabledata = [
+    let Tabledata = [
         {
             id: 1,
             bookname: "Book1",
@@ -40,7 +40,7 @@ function SearchBookrecord() {
             bookname: "Book4",
             authorname: "Saam",
             bookprice: 500,
-            publisheddate:"23 / 2 / 2024",
+            publisheddate: "23 / 2 / 2024",
             bookpdf: "i do not know about integarate pdf"
 
 
@@ -55,6 +55,57 @@ function SearchBookrecord() {
             bookpdf: "i do not know about integarate pdf"
 
 
+        },
+        {
+            id: 6,
+            bookname: "Book6",
+            authorname: "Saam",
+            bookprice: 500,
+            publisheddate: "23 / 2 / 2024",
+            bookpdf: "i do not know about integarate pdf"
+
+
+        },
+
+        {
+            id: 7,
+            bookname: "Book7",
+            authorname: "Saam",
+            bookprice: 500,
+            publisheddate: "23 / 2 / 2024",
+            bookpdf: "i do not know about integarate pdf"
+
+
+        },
+        {
+            id: 8,
+            bookname: "Book8",
+            authorname: "Saam",
+            bookprice: 500,
+            publisheddate: "23 / 2 / 2024",
+            bookpdf: "i do not know about integarate pdf"
+
+
+        },
+        {
+            id: 9,
+            bookname: "Book9",
+            authorname: "Saam",
+            bookprice: 500,
+            publisheddate: "23 / 2 / 2024",
+            bookpdf: "i do not know about integarate pdf"
+
+
+        },
+        {
+            id: 10,
+            bookname: "Book10",
+            authorname: "Saam",
+            bookprice: 500,
+            publisheddate: "23 / 2 / 2024",
+            bookpdf: "i do not know about integarate pdf"
+
+
         }
     ]
 
@@ -63,10 +114,23 @@ function SearchBookrecord() {
         console.log(Searchdata);
     }
 
-    const  Handledelet=()=>{
-        console.log("this is a handle delet")
-    }
+    const Handledelet = (id) => {
 
+
+        Tabledata = Tabledata.filter((val) => {
+
+            if ((val.id) != id) {
+                return val;
+
+            }
+        })
+
+
+        console.log(id);
+
+
+    }
+    
     return (
         <div className='Search_page_parent'>
 
@@ -110,7 +174,7 @@ function SearchBookrecord() {
                                     <td>{data.bookprice}</td>
                                     <td>{data.publisheddate}</td>
                                     <td>{data.bookpdf}</td>
-                                    <td><button onClick={Handledelet}>Delet</button></td>
+                                    <td><button onClick={(id) => Handledelet(data.id)} className='Search_page_delet_btn'>Delet</button></td>
                                 </tr>
 
                             ))
