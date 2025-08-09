@@ -16,7 +16,7 @@ function UpdateBookrecord() {
     }
 
     const HandleBookpdf=(event)=>{
-        setPublisheddate(event.target.files[0]);
+        setBookpdf (event.target.files[0]);
     }
 
     const HandleBookcreate = (event) => {

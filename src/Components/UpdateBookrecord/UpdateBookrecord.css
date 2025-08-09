@@ -39,7 +39,7 @@ form {
     border: 1px solid #28a745; /* Green border */
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-color 0.3s; /* Smooth transition for focus */
+    transition: border-color 0.3s; 
 }
 
 .update_book_record_child input[type="text"]:focus,

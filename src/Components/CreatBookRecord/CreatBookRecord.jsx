@@ -7,11 +7,11 @@ export default function CreatBookRecord() {
     const [Authorname, setAuthorname] = useState("")
     const [Bookprice, setBookprice] = useState("")
     const [Publisheddate, setPublisheddate] = useState("")
-    const [Bookpdf, setBookpdf]=useState(null)
+    const [Bookpdf, setBookpdf]= useState("")
 
    const HandleBookpdf=(event)=>{
 
-    setPublisheddate(event.target.files[0]);
+    setBookpdf(event.target.files[0]);
 
    }
 
@@ -20,11 +20,13 @@ export default function CreatBookRecord() {
      event.preventDefault();
 
      const obj={
+
         bookname:Bookname,
         authorname:Authorname,
         bookprice:Bookprice,
         publisheddate:Publisheddate,
         bookpdf:Bookpdf
+
      }
 
      console.log(obj);
