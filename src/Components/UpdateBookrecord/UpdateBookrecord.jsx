@@ -75,7 +75,7 @@ function UpdateBookrecord() {
                         onChange={(event) => setPublisheddate(event.target.value)} />
                 </div>
 
-                <div className='update_book_record_child'>
+                <div className='update_book_record_child' id='Update_file'>
                     <input type="file"
                         accept='.pdf'
                         value={Bookpdf}

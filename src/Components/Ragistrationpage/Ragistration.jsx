@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Ragistration.css'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 const Ragistration = () => {
@@ -10,9 +11,9 @@ const Ragistration = () => {
     const [Password, setPassword] = useState("")
 
 
-    const NavigatetoLogin=useNavigate();
-    const NavigatetoDashboard=useNavigate();
-    
+    const NavigatetoLogin = useNavigate();
+    const NavigatetoDashboard = useNavigate();
+
 
 
 
@@ -20,28 +21,36 @@ const Ragistration = () => {
 
         event.preventDefault();
 
-       const obj = {
+        const obj = {
 
-            name: Username,
+
+            username: Username,
             number: Number,
             email: Email,
             password: Password
 
+
         }
 
-      console.log(obj)
+        console.log(obj)
+
+        axios.post("http://localhost:8080/api/CreateUser", obj)
+            .then((response) => console.log(response))
+            .catch((error) => console.error(error));
+
+
     }
 
 
-    const Gotologin=()=>{
+    const Gotologin = () => {
 
         NavigatetoLogin("/login")
-        
-    }
-    
-    const GotoDahsboard=()=>{
 
-         NavigatetoDashboard("/Dashboard")
+    }
+
+    const GotoDahsboard = () => {
+
+        NavigatetoDashboard("/Dashboard")
 
     }
 
@@ -58,7 +67,7 @@ const Ragistration = () => {
                         placeholder='Enter the user name'
                         onChange={(event) => setUsername(event.target.value)} />
                 </div>
-                <div  className='child'>
+                <div className='child'>
                     <h4>Mobile Number</h4>
                     <input type="number" name="number"
                         value={Number}
@@ -67,14 +76,14 @@ const Ragistration = () => {
                 </div>
 
                 <div>
-                    <h4  className='child'>Email</h4>
+                    <h4 className='child'>Email</h4>
                     <input type="email" name="Email"
                         value={Email}
                         placeholder='Enter the Email'
                         onChange={(event) => setEmail(event.target.value)} />
                 </div>
 
-                <div  className='child'>
+                <div className='child'>
                     <h4>Password</h4>
                     <input type="password" name="Password"
                         value={Password}
@@ -86,12 +95,12 @@ const Ragistration = () => {
                     <button onClick={Handlesubmit} className='submit'> Submit</button>
                 </div>
 
-                 
+
 
             </form>
 
-          <p>if you registar  <button onClick={Gotologin} className='gotologin'> Click here for Log in </button></p>
-          <button onClick={GotoDahsboard}>Dashboard</button>
+            <p>if you registar  <button onClick={Gotologin} className='gotologin'> Click here for Log in </button></p>
+            <button onClick={GotoDahsboard}>Dashboard</button>
         </div>
 
 
