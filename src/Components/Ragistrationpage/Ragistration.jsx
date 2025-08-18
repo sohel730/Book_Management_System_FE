@@ -35,7 +35,15 @@ const Ragistration = () => {
         console.log(obj)
 
         axios.post("http://localhost:8080/api/CreateUser", obj)
-            .then((response) => console.log(response))
+            .then((response) => {
+
+                console.log(response);
+
+                if(response.data===true)
+                {
+                     NavigatetoDashboard("/Dashboard")
+                }
+            })
             .catch((error) => console.error(error));
 
 

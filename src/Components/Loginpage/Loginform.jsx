@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Loginform.css'
+import axios from 'axios'
 
 export default function Loginform() {
 
@@ -11,6 +12,7 @@ export default function Loginform() {
 
     const gotoragisterpage = useNavigate();
     const gottoforgetpasswordpage = useNavigate();
+    const gotodashboard=useNavigate()
 
 
     const Handlelogin = (event) => {
@@ -23,8 +25,22 @@ export default function Loginform() {
             Password: Password
 
         }
+
+
         console.log(obj);
 
+        axios.post("http://localhost:8080/api/Login",obj)
+        .then((response)=>{
+
+            console.log(response);
+
+            if(response.status===200)
+            {
+                gotodashboard("/Dashboard")
+            }
+
+        })
+        .catch((error)=>console.log(error))
     }
 
     const Gotoragistar = () => {
